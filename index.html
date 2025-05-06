@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Krushna Diwate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'valorant-red': '#FF4655',
+                        'valorant-blue': '#0F1923',
+                        'valorant-gray': '#ECE8E1',
+                        'valorant-dark': '#1F2326',
+                    },
+                    fontFamily: {
+                        'valorant': ['Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0F1923;
+            color: #ECE8E1;
+        }
+        
+        .valorant-button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ECE8E1;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid #FF4655;
+        }
+        
+        .valorant-button:hover {
+            background-color: #FF4655;
+            color: #0F1923;
+        }
+        
+        .valorant-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 70, 85, 0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .valorant-button:hover::before {
+            left: 100%;
+        }
+        
+        .tech-logo {
+            transition: all 0.3s;
+        }
+        
+        .tech-logo:hover {
+            filter: drop-shadow(0 0 5px rgba(255, 70, 85, 0.7));
+            transform: scale(1.1);
+        }
+        
+        .project-slide {
+            transition: transform 0.5s ease;
+        }
+        
+        .slide-controls button {
+            transition: all 0.3s;
+        }
+        
+        .slide-controls button:hover {
+            color: #FF4655;
+            transform: scale(1.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background-color: #FF4655;
+        }
+    </style>
+</head>
+<body class="bg-valorant-blue text-valorant-gray">
+    <header class="py-6 border-b border-valorant-red">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-valorant-red tracking-wider uppercase">Krushna Diwate</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- About Section -->
+        <section class="mb-16">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/3">
+                    <div class="rounded-lg overflow-hidden border-2 border-valorant-red">
+                        <img src="./documents/K2.jpg" alt="Profile Image" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-bold mb-4 section-title">About Me</h2>
+                    <p class="text-lg mb-6">I am a highly motivated and technically proficient Computer Engineering undergraduate with hands-on experience in full-stack web development and AI-powered applications. My technical stack includes React.js, Node.js, Express, and MongoDB, complemented by a solid understanding of modern front-end frameworks like Tailwind CSS and Bootstrap. I have successfully delivered several projects, including an AI-integrated movie recommendation platform and an image recognition system, showcasing my ability to build scalable, intelligent, and user-focused applications.
+                        I excel in creating responsive, dynamic, and data-driven applications, and I am passionate about leveraging emerging technologies like Google Gemini AI to enhance user experience. I am seeking opportunities to further apply and grow my skills in a challenging software development environment.
+                    </p>
+                    <div class="mt-6">
+                        <a href="./documents/Krushna_Resume_i2025.pdf" download class="valorant-button">
+                            <i class="fas fa-download mr-2"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="mb-16 bg-valorant-dark p-6 rounded-lg">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://in.linkedin.com/in/krushna-diwate-24jk17" class="flex items-center gap-2 text-valorant-gray hover:text-valorant-red transition-colors">
+                    <i class="fab fa-linkedin text-2xl"></i> LinkedIn
+                </a>
+                <a href="https://github.com/krushnadiwate2417" class="flex items-center gap-2 text-valorant-gray hover:text-valorant-red transition-colors">
+                    <i class="fab fa-github text-2xl"></i> Github
+                </a>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope text-valorant-red"></i>
+                    <span>krushnadiwate2417@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-valorant-red"></i>
+                    <span>8767901682</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Moved Contact Section to be below About Me -->
+
+        <!-- Experience Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Experience</h2>
+            <div class="bg-valorant-dark p-6 rounded-lg">
+                <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-2">
+                        <img src="./documents/PrakrutLogo.jpeg" alt="Company Logo" class="w-full h-full object-contain rounded-full">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-valorant-red">Web Developer Intern</h3>
+                        <p class="text-sm opacity-80 mb-2">Jan 2025 - April 2025</p>
+                        <p class="mb-4">
+                            Managed the database using MongoDB, ensuring efficient data storage and retrieval for user profiles and resumes.
+                            Developed RESTful APIs for authentication and user CRUD operations using Node.js and Express, enabling seamless user
+                            management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Tech Stack</h2>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 bg-valorant-dark p-6 rounded-lg">
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-16 h-16">
+                    <span class="mt-2">HTML5</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-16 h-16">
+                    <span class="mt-2">CSS3</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" class="w-16 h-16">
+                    <span class="mt-2">Tailwind</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="w-16 h-16">
+                    <span class="mt-2">Bootstrap</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16">
+                    <span class="mt-2">JavaScript</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-16 h-16">
+                    <span class="mt-2">React</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-16 h-16">
+                    <span class="mt-2">Node.js</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="w-16 h-16 bg-white p-1 rounded">
+                    <span class="mt-2">Express</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-16 h-16">
+                    <span class="mt-2">MongoDB</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-16 h-16">
+                    <span class="mt-2">PostgreSQL</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-16 h-16">
+                    <span class="mt-2">Docker</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-16 h-16">
+                    <span class="mt-2">Java</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-16 h-16">
+                    <span class="mt-2">Python</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg" alt="Swagger" class="w-16 h-16">
+                    <span class="mt-2">Swagger UI</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-16 h-16">
+                    <span class="mt-2">Firebase</span>
+                </div>
+                <div class="tech-logo flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-16 h-16 bg-white rounded-full">
+                    <span class="mt-2">GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Projects</h2>
+            <div class="bg-valorant-dark p-6 rounded-lg">
+                <div class="relative overflow-hidden">
+                    <div id="project-slider" class="flex transition-transform duration-500 ease-in-out">
+                        <div class="project-slide min-w-full">
+                            <a href="https://agrofix-client-kappa.vercel.app/" class="project-link block relative group">
+                                <img src="./documents/Agrofix.png" alt="Agrofix Project" class="w-full h-64 object-cover rounded-lg">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <span class="text-valorant-red text-xl font-bold">View Project</span>
+                                </div>
+                                <h3 class="text-xl font-bold mt-2">Agrofix</h3>
+                                <p class="text-sm opacity-80">Agricultural solutions platform</p>
+                            </a>
+                        </div>
+                        <div class="project-slide min-w-full">
+                            <a href="https://projectandtaskmanagement.netlify.app/" class="project-link block relative group">
+                                <img src="./documents/ProjectManagement.png" alt="Project Management" class="w-full h-64 object-cover rounded-lg">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <span class="text-valorant-red text-xl font-bold">View Project</span>
+                                </div>
+                                <h3 class="text-xl font-bold mt-2">Project Management</h3>
+                                <p class="text-sm opacity-80">Task and team management system</p>
+                            </a>
+                        </div>
+                        <div class="project-slide min-w-full">
+                            <a href="https://watchnet24.netlify.app/" class="project-link block relative group">
+                                <img src="./documents/Watchnet.png" alt="Watchnet" class="w-full h-64 object-cover rounded-lg">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <span class="text-valorant-red text-xl font-bold">View Project</span>
+                                </div>
+                                <h3 class="text-xl font-bold mt-2">Watchnet</h3>
+                                <p class="text-sm opacity-80">Streaming platform interface</p>
+                            </a>
+                        </div>
+                        <div class="project-slide min-w-full">
+                            <a href="https://myorganizer2417.netlify.app/" class="project-link block relative group">
+                                <img src="./documents/ExpenseTracker.png" alt="Expense Tracker" class="w-full h-64 object-cover rounded-lg">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <span class="text-valorant-red text-xl font-bold">View Project</span>
+                                </div>
+                                <h3 class="text-xl font-bold mt-2">Expense Tracker</h3>
+                                <p class="text-sm opacity-80">Personal finance management app</p>
+                            </a>
+                        </div>
+                        <div class="project-slide min-w-full">
+                            <a href="https://feedbackcolector.netlify.app/" class="project-link block relative group">
+                                <img src="./documents/FeedbackCollector.png" alt="Feedback Collector" class="w-full h-64 object-cover rounded-lg">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <span class="text-valorant-red text-xl font-bold">View Project</span>
+                                </div>
+                                <h3 class="text-xl font-bold mt-2">Feedback Collector</h3>
+                                <p class="text-sm opacity-80">User feedback management system</p>
+                            </a>
+                        </div>
+                        <div class="project-slide min-w-full">
+                            <a href="https://cardealer24.netlify.app/" class="project-link block relative group">
+                                <img src="./documents/CarsFinder.png" alt="Cars Finder" class="w-full h-64 object-cover rounded-lg">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <span class="text-valorant-red text-xl font-bold">View Project</span>
+                                </div>
+                                <h3 class="text-xl font-bold mt-2">Cars Finder</h3>
+                                <p class="text-sm opacity-80">Vehicle search and comparison tool</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Controls -->
+                    <div class="slide-controls flex justify-between items-center mt-4">
+                        <button id="prev-btn" class="text-2xl text-valorant-gray hover:text-valorant-red focus:outline-none">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="slide-indicators flex gap-2">
+                            <span class="slide-dot w-3 h-3 rounded-full bg-valorant-gray cursor-pointer" data-index="0"></span>
+                            <span class="slide-dot w-3 h-3 rounded-full bg-valorant-gray opacity-50 cursor-pointer" data-index="1"></span>
+                            <span class="slide-dot w-3 h-3 rounded-full bg-valorant-gray opacity-50 cursor-pointer" data-index="2"></span>
+                            <span class="slide-dot w-3 h-3 rounded-full bg-valorant-gray opacity-50 cursor-pointer" data-index="3"></span>
+                            <span class="slide-dot w-3 h-3 rounded-full bg-valorant-gray opacity-50 cursor-pointer" data-index="4"></span>
+                            <span class="slide-dot w-3 h-3 rounded-full bg-valorant-gray opacity-50 cursor-pointer" data-index="5"></span>
+                        </div>
+                        <button id="next-btn" class="text-2xl text-valorant-gray hover:text-valorant-red focus:outline-none">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extra Activities Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Extra Curricular Activities</h2>
+            <div class="bg-valorant-dark p-6 rounded-lg flex flex-wrap gap-4">
+                <a href="https://leetcode.com/u/Krushna_Diwate/" class="valorant-button">
+                    <i class="fas fa-code mr-2"></i> LeetCode
+                </a>
+                <a href="https://www.hackerrank.com/profile/krushnadiwate241" class="valorant-button">
+                    <i class="fas fa-laptop-code mr-2"></i> Hackerrank
+                </a>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Hobbies</h2>
+            <div class="bg-valorant-dark p-6 rounded-lg">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="hobby-item flex flex-col items-center p-4 border border-valorant-gray rounded-lg">
+                        <i class="fas fa-pencil-alt text-3xl text-valorant-red mb-2"></i>
+                        <span>Sketching</span>
+                    </div>
+                    <div class="hobby-item flex flex-col items-center p-4 border border-valorant-gray rounded-lg">
+                        <i class="fas fa-running text-3xl text-valorant-red mb-2"></i>
+                        <span>Running</span>
+                    </div>
+                    <div class="hobby-item flex flex-col items-center p-4 border border-valorant-gray rounded-lg">
+                        <i class="fas fa-dumbbell text-3xl text-valorant-red mb-2"></i>
+                        <span>Working Out</span>
+                    </div>
+                    <div class="hobby-item flex flex-col items-center p-4 border border-valorant-gray rounded-lg">
+                        <i class="fas fa-book text-3xl text-valorant-red mb-2"></i>
+                        <span>Reading</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-valorant-dark py-6 border-t border-valorant-red">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-valorant-gray">&copy; 2025 | KD</p>
+        </div>
+    </footer>
+
+    <script>
+        // Project Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('project-slider');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const dots = document.querySelectorAll('.slide-dot');
+            
+            let currentSlide = 0;
+            const totalSlides = document.querySelectorAll('.project-slide').length;
+            
+            // Initialize slider
+            updateSlider();
+            
+            // Set up auto slide
+            let slideInterval = setInterval(nextSlide, 4000);
+            
+            // Event listeners for buttons
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+                resetInterval();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+                resetInterval();
+            });
+            
+            // Event listeners for dots
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    currentSlide = parseInt(this.getAttribute('data-index'));
+                    updateSlider();
+                    resetInterval();
+                });
+            });
+            
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.remove('opacity-50');
+                    } else {
+                        dot.classList.add('opacity-50');
+                    }
+                });
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+            
+            function resetInterval() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 4000);
+            }
+            
+            // Project links have been added directly to the HTML
+        });
+    </script>
+</body>
+</html>
